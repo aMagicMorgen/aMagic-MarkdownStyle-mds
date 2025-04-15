@@ -1,7 +1,7 @@
 <?php
+// Пример использования: пока без MarkdownExtra
 require_once 'MarkdownStyle.php';
-// Пример использования:
-//include 'mdh.mdh';
+
 $nom = '321';
 $data = date('d.m.Y');
 
