@@ -1,0 +1,77 @@
+<0 meta | http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<0 div #accordionExample .accordion>
+ <1 div .accordion-item>
+  <2 h2 .accordion-header>
+   <3 button .accordion-button | type='button' data-bs-toggle='collapse' data-bs-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne'>
+
+Элемент аккордеона #1
+
+  <2 div #collapseOne .accordion-collapse collapse show | data-bs-parent='#accordionExample'>
+   <3 div .accordion-body>
+    <4 strong>
+
+Это тело аккордеона первого элемента.
+
+
+Оно отображается по умолчанию, пока плагин свертывания не добавит соответствующие классы, 
+которые мы используем для стилизации каждого элемента. 
+Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. 
+Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. 
+Также стоит отметить, что практически любой HTML может быть помещен в
+
+     <5 code>.accordion-body
+	<4 strong>
+
+, хотя переход ограничивает переполнение.
+
+ <1 div .accordion-item>
+  <2 h2 .accordion-header>
+   <3 button .accordion-button collapsed | type='button' data-bs-toggle='collapse' data-bs-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo'>
+
+Элемент аккордеона #2
+
+  <2 div #collapseTwo .accordion-collapse collapse | data-bs-parent='#accordionExample'>
+   <3 div .accordion-body>
+    <4 strong>
+
+Это тело аккордеона второго элемента.
+
+
+По умолчанию он скрыт, пока плагин свертывания не добавит соответствующие классы, 
+которые мы используем для стилизации каждого элемента. 
+Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS.
+ Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию.
+ Также стоит отметить, что практически любой HTML может быть помещен в
+
+    <4 code>
+
+.accordion-body
+	<4 strong>
+
+, хотя переход ограничивает переполнение.
+
+ <1 div .accordion-item>
+  <2 h2 .accordion-header>
+   <3 button .accordion-button collapsed | type='button' data-bs-toggle='collapse' data-bs-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree'>
+
+Элемент аккордеона #3
+
+  <2 div #collapseThree .accordion-collapse collapse | data-bs-parent='#accordionExample'>
+   <3 div .accordion-body>
+    <4 strong>
+
+Это тело аккордеона третьего элемента.
+
+
+По умолчанию оно скрыто, пока плагин свертывания не добавит соответствующие классы,
+ которые мы используем для стилизации каждого элемента. 
+ Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. 
+ Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. 
+ Также стоит отметить, что практически любой HTML может быть помещен в
+
+    <4 code>
+
+.accordion-body
+	<4 strong>
+
+, хотя переход ограничивает переполнение.

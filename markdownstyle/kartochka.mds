@@ -1,0 +1,78 @@
+
+<0 div #custom-cards .container px-4 py-5>
+ <1 h2 .pb-2 border-bottom>
+
+Пользовательская карточка
+
+ <1 div .row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5>
+  <2 div .col>
+   <3 div .card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg | style="background-image: url('unsplash-photo-1.jpg');">
+    <4 div .d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1>
+     <5 h2 .pt-5 mt-5 mb-4 display-6 lh-1 fw-bold>
+
+Короткое название, длинная куртка
+
+     <5 ul .d-flex list-unstyled mt-auto>
+      <6 li .me-auto>
+       <7 img .rounded-circle border border-white | src='https://github.com/twbs.png' alt='Bootstrap' width='32' height='32'>
+      <6 li .d-flex align-items-center me-3>
+       <7 svg .bi me-2 | width='1em' height='1em'>
+        <8 use | xlink:href='#geo-fill'>
+       <7 small>
+
+Земля
+
+      <6 li .d-flex align-items-center>
+       <7 svg .bi me-2 | width='1em' height='1em'>
+        <8 use | xlink:href='#calendar3'>
+       <7 small>
+
+3d
+
+  <2 div .col>
+   <3 div .card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg | style='background-image: url('unsplash-photo-2.jpg');'>
+    <4 div .d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1>
+     <5 h2 .pt-5 mt-5 mb-4 display-6 lh-1 fw-bold>
+
+Гораздо более длинный заголовок, который занимает несколько строк
+
+     <5 ul .d-flex list-unstyled mt-auto>
+      <6 li .me-auto>
+       <7 img .rounded-circle border border-white | src='https://github.com/twbs.png' alt='Bootstrap' width='32' height='32'>
+      <6 li .d-flex align-items-center me-3>
+       <7 svg .bi me-2 | width='1em' height='1em'>
+        <8 use | xlink:href='#geo-fill'>
+       <7 small>
+
+Пакистан
+
+      <6 li .d-flex align-items-center>
+       <7 svg .bi me-2 | width='1em' height='1em'>
+        <8 use | xlink:href='#calendar3'>
+       <7 small>
+
+4d
+
+  <2 div .col>
+   <3 div .card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg | style='background-image: url('unsplash-photo-3.jpg');'>
+    <4 div .d-flex flex-column h-100 p-5 pb-3 text-shadow-1>
+     <5 h2 .pt-5 mt-5 mb-4 display-6 lh-1 fw-bold>
+
+Еще одно более длинное название принадлежит здесь
+
+     <5 ul .d-flex list-unstyled mt-auto>
+      <6 li .me-auto>
+       <7 img .rounded-circle border border-white | src='https://github.com/twbs.png' alt='Bootstrap' width='32' height='32'>
+      <6 li .d-flex align-items-center me-3>
+       <7 svg .bi me-2 | width='1em' height='1em'>
+        <8 use | xlink:href='#geo-fill'>
+       <7 small>
+
+Калифорния
+
+      <6 li .d-flex align-items-center>
+       <7 svg .bi me-2 | width='1em' height='1em'>
+        <8 use | xlink:href='#calendar3'>
+       <7 small>
+
+5d
