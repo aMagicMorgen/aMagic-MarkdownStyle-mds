@@ -1,5 +1,5 @@
 # mds-MarkdownStyle
-Рсширение MarkdownExtra вводит новые возможности в md текст предлагаю писать в *.mds - MarkdownStyle или *.mdh - MarkdownHibrid
+MarkdownStyle наследует MarkdownExtra вводит новые возможности в md текст предлагаю писать в *.mds - MarkdownStyle или *.mdh - MarkdownHibrid
 
 **Автор:** Алексей Нечаев, г. Москва, +7(999) 637-60-01, nechaev72@list.ru   
 **Версия:** 1.0 (15.04.2025)  
