@@ -1,9 +1,3 @@
-
-<?php
-$nom = '777';
-$data = date('d.m.Y');
-?>
-
 <!--mds-->
 <center>
 
@@ -59,6 +53,11 @@ $data = date('d.m.Y');
 Закрыть
 	<4 button  .btn btn-primary | type="button">
 Сохранить изменения
+
+<?php
+$nom = '777';
+$data = date('d.m.Y');
+?>
 
 	<!-- ТАБЛИЦА -->
 <section>
