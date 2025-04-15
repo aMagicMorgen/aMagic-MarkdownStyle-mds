@@ -1,6 +1,6 @@
 # mds-MarkdownStyle
 MarkdownStyle наследует MarkdownExtra вводит новые возможности в md текст предлагаю писать в *.mds - MarkdownStyle или *.mdh - MarkdownHibrid   
-https://amagicmorgen.github.io/mds-MarkdownStyle/(https://amagicmorgen.github.io/mds-MarkdownStyle/)   
+https://amagicmorgen.github.io/mds-MarkdownStyle/[https://amagicmorgen.github.io/mds-MarkdownStyle/]   
 
 **Автор:** Алексей Нечаев, г. Москва, +7(999) 637-60-01, nechaev72@list.ru   
 **Версия:** 1.0 (15.04.2025)  
@@ -10,7 +10,7 @@ https://amagicmorgen.github.io/mds-MarkdownStyle/(https://amagicmorgen.github.io
 
 # **Презентация MarkdownStyle Hybrid**  
 # *(MTHL - Markup Text Hybrid Language)*  
-https://amagicmorgen.github.io/mthl/(https://amagicmorgen.github.io/mthl/)  
+https://amagicmorgen.github.io/mthl/[https://amagicmorgen.github.io/mthl/]  
 ---
 ## **🌌 Будущее разметки уже здесь!**  
 ### **Синтаксис MTHL** — гибрид Markdown, MDS и PHP  
