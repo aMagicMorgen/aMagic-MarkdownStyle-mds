@@ -8,7 +8,7 @@
 ---
 
 # **Презентация MarkdownStyle Hybrid**  
-*(MTHL - Markup Text Hybrid Language)*  
+# *(MTHL - Markup Text Hybrid Language)*  
 
 ---
 ## **🌌 Будущее разметки уже здесь!**  
