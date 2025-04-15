@@ -119,50 +119,46 @@ $data = date('d.m.Y');
 
 --- 
 
-
+<!--mds-->
 <section>
-<form .row g-3>
-  <div .col-md-6>
-    <label  .form-label |for="inputEmail4">Эл. адрес</label>
-    <input #inputEmail4 .form-control | type="email" >
-  </div>
-  <div .col-md-6>
-    <label  .form-label | for="inputPassword4">Пароль</label>
-    <input  #inputPassword4 | type="password">
-  </div>
-  <div .col-12">
-    <label for="inputAddress" .form-label">Адрес</label>
-    <input type="text" .form-control" #inputAddress" placeholder="Проспект Ленина">
-  </div>
-  <div .col-12">
-    <label for="inputAddress2" .form-label">Адрес 2</label>
-    <input type="text" .form-control" #inputAddress2" placeholder="Квартира">
-  </div>
-  <div .col-md-6">
-    <label for="inputCity" .form-label">Город</label>
-    <input type="text" .form-control" #inputCity" placeholder="Брянск">
-  </div>
-  <div .col-md-4">
-    <label for="inputState" .form-label">Область</label>
-    <select #inputState" .form-select">
-      <option selected>Выберите...</option>
-      <option>...</option>
-    </select>
-  </div>
-  <div .col-md-2">
-    <label for="inputZip" .form-label">Индекс</label>
-    <input type="text" .form-control" #inputZip">
-  </div>
-  <div .col-12">
-    <div .form-check">
-      <input .form-check-input" type="checkbox" #gridCheck">
-      <label .form-check-label" for="gridCheck">
-        Проверить меня
-      </label>
-    </div>
-  </div>
-  <div .col-12">
-    <button type="submit" .btn btn-primary">Войти в систему</button>
-  </div>
-</form>
-</section>
+<1 form .row g-3>
+  <2 div .col-md-6>
+    <3 label  .form-label |for="inputEmail4">
+	Эл. адрес
+    <3 input #inputEmail4 .form-control | type="email" >
+  <2 div .col-md-6>
+    <3 label  .form-label |for="inputPassword4" >
+	Пароль
+    <3 input  #inputPassword4 .form-control |type="password">
+  <2 div .col-12>
+    <3 label .form-label | for="inputAddress" >
+	Адрес
+    <3 input #inputAddress .form-control | type="text"  placeholder="Проспект Ленина">
+  <2 div .col-12>
+    <3 label .form-label | for="inputAddress2">
+	Адрес 2
+    <3 input #inputAddress2 .form-control |  type="text" placeholder="Квартира">
+  <2 div .col-md-6>
+    <3 label .form-label | for="inputCity" >
+	Город
+    <3 input  .form-control #inputCity | type="text" placeholder="Брянск">
+  <2 div .col-md-4>
+    <3 label .form-label | for="inputState" >
+	Область
+    <3 select #inputState .form-select>
+      <4 option |selected>
+	  Выберите...
+      <4 option>...
+  <2 div .col-md-2>
+    <3 label .form-label | for="inputZip">
+	Индекс
+    <3 input #inputZip .form-control | type="text">
+  <2 div .col-12>
+    <2 div .form-check>
+      <3 input #gridCheck .form-check-input | type="checkbox" >
+      <3 label .form-check-label | for="gridCheck">
+      Проверить меня
+  <2 div .col-12>
+    <3 button  .btn btn-primary | type="submit">
+	Войти в систему
+<!--/mds-->
