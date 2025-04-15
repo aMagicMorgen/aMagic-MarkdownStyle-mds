@@ -1,0 +1,37 @@
+<?php
+$nom = '555';
+$data = date('d.m.Y');
+?>
+	
+# Заголовок файл *.mthl
+
+<!--mds-->
+<section .container>
+
+## Это MDH-гибридная разметка внутри Markdown
+
+Обычный *Markdown* текст.
+
+<1 div .footer>
+<2 p >Футер в MDS
+
+<0 section>
+<1 table #tab tab3 .table><2 tbody>
+<3 thead>
+<4 tr><5 th |colspan = "2">
+ЗАГОЛОВОК
+<4 tr><5 th>
+НОМЕР
+<5 th>
+ДАТА
+
+<   tbody>
+<    tr>
+<     td><?= $nom ?>
+<     td><?= $data ?>
+<!--/mds-->
+
+<br>
+<p>Это HTML</p>
+
+**Дальше Markdown**
