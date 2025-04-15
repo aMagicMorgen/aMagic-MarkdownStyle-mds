@@ -29,7 +29,7 @@ echo '
 body{
 max-width: 960px;	
 margin: 0 auto;
-    padding-bottom: 107px;	
+padding-bottom: 107px;	
 }
 section {
 	max-width: 960px; 
@@ -76,92 +76,4 @@ echo "
 echo "</main>
   </body>
 </body></html>";
-#echo '<pre>' . htmlspecialchars(MarkdownStyle::parse($mdh)) . '</pre>';;
-/*
-ob_start(); 
-    include 'mds.mds'; 
-    $mds = ob_get_clean(); 
-echo MDS::toHtml($mds);
-*/
-/*
-// Пример использования
-$mdh = '
-<!--mds
-<1 div .conteiner>
-<2 div #main header .class1 class2 class3 | data-test="value">
-   Многострочный
-   текст с отступами
-<3 img #logo .image | src="logo.png" alt="Logo">
-<3 p >
 
-Обычный текст 
--->';
-
-$mds = '
-<section>
-< div .conteiner>
-<   div #main header .class1 class2 class3 | data-test="value">
-   Многострочный
-   текст с        отступами
-<    img #logo .image | src="logo.png" alt="Logo">
-<    p >
-Обычный текст';
-
-#echo '<pre>' . htmlspecialchars(MarkdownStyle::parse($mdh)) . '</pre>';
-#echo '<pre>' . htmlspecialchars(MDS::toHtml($mds)) . '</pre>';
-
-// Пример использования
-
-$mds = '
-<!-- БЛОК -->
-<section>
-<1 div .conteiner>
-	<2 div #main header .class1 class2 class3 | data-test="value">
-Многострочный
-   текст с отступами
-		<3 img #logo .image | src="logo.png" alt="Logo">
-		<3 p >Обычный текст';
-
-$nom = '321';
-$data = date('d.m.Y');
-$mds .= ' 
-<!-- ТАБЛИЦА -->
-<0 section>
-<1 table #tab tab3 .table><2 tbody>
-<3 thead>
-<4 tr><5 th |colspan = "2">
-ЗАГОЛОВОК
-<4 tr><5 th>
-НОМЕР
-<5 th>
-ДАТА
-
-<   tbody>
-<    tr>
-<     td>'. $nom . '
-<     td>' . $data. '
-	
-<!-- ОТСТУП -->
-<br>';
-
-$mds .= '
-<!-- ФОРМА -->				
-<form |action="./">
-< table>
-<  tr>
-<   td>
-<    span>Логин  
-<    input #name name[] .control |type="text" placeholder="Логин...">
-<  tr>
-<   td>
-<    span>Пароль
-<    input #name name[] .control |type="search" placeholder="ПАРОЛЬ...">
-<  tr>
-<   td> 
-<    input |type="submit" value="ОТПРАВИТЬ">
-
-';
-*/
-#echo '<pre>' . htmlspecialchars(MDS::toHtml($mds)) . '</pre>';
-
-#echo MDS::toHtml($mds);
