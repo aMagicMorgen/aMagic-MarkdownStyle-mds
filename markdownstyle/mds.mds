@@ -1,14 +1,16 @@
-<?php
-$nom = '777';
-$data = date('d.m.Y');
-?>
-
 <!--mds-->
 <center>
 
 
 # Документ *.mds
 
+<!--mds-->
+<?php
+include 'kartochka.mds';
+include 'setka.mds';
+?>
+
+<!--/mds-->
 
 -----
 
@@ -58,7 +60,10 @@ $data = date('d.m.Y');
 Закрыть
 	<4 button  .btn btn-primary | type="button">
 Сохранить изменения
-
+<?php
+$nom = '777';
+$data = date('d.m.Y');
+?>
 	<!-- ТАБЛИЦА -->
 <section>
 <1 table #tab tab3 .table><2 tbody>
@@ -120,6 +125,17 @@ $data = date('d.m.Y');
 --- 
 
 <!--mds-->
+<?php
+include 'akkordeon.mds';
+?>
+<!--/mds-->
+
+---
+- Пример
+	- Пример
+	- Пример
+
+<!--mds-->
 <section>
 <1 form .row g-3>
   <2 div .col-md-6>
@@ -161,4 +177,60 @@ $data = date('d.m.Y');
   <2 div .col-12>
     <3 button  .btn btn-primary | type="submit">
 	Войти в систему
+	
+
+<0 meta | http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<0 div #header .main banner | data-role='primary'>
+ <1 ul .nav>
+  <2 li .item active>
+
+Home
+
+  <2 li>
+
+About
+
+ <1 img | src='logo.png' alt='Logo'><0 meta | http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<0 div #header .main banner | data-role='primary'>
+ <1 ul .nav>
+  <2 li .item active>
+
+Home
+
+  <2 li>
+
+About
+
+ <1 img | src='logo.png' alt='Logo'>
+<0 p>
+
+Hello
+
+ <1 strong>
+
+World
+
+<0 input #id .class1 class2 | name='name' type='text' required=''>
+<0 div #menu-container .class1 class2 class3 | name='name'>
+
+МЕНЮ
+Большое
+     Длинное
+
+ <1 ul .nav-menu>
+  <2 li .folder>
+   <3 span .folder-name>
+
+.
+
+   <3 ul .file-list>
+    <4 li .file>
+     <5 a | href='#' data-md='.\README.md' title='.\README.md'>
+
+README
+
+    <4 li .file>
+     <5 a | href='#' data-md='.\class-HtmlToMDS.md' title='.\class-HtmlToMDS.md'>
+
+class-HtmlToMDS
 <!--/mds-->
