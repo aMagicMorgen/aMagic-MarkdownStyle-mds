@@ -137,4 +137,187 @@ title = <?= htmlspecialchars($pageTitle) ?>
 2. Реализовать наследование шаблонов  
 3. Ввести безопасный режим без `eval()`  
 
-Какой аспект важнее для вашего проекта? 😊
+Какой аспект важнее для вашего проекта? 
+
+### **Финальная реализация с Markdown-обработкой**
+
+#### **1. Структура файлов**
+```
+project/
+├── index.php          # Главный обработчик
+├── MDSL.php           # Класс для работы с MDSL-шаблонами
+├── Parsedown.php      # Парсер Markdown (скачать с GitHub)
+└── templates/
+    └── contact.mdsl   # Пример шаблона
+```
+
+---
+
+### **2. index.php (полная версия)**
+```php
+<?php
+require_once 'MDSL.php';
+require_once 'Parsedown.php';
+
+class MDSFile {
+    private $filePath;
+    private $vars = [];
+    private $compiledContent;
+
+    public function __construct(string $filePath, array $vars = []) {
+        $this->filePath = $filePath;
+        $this->vars = $vars;
+        $this->compile();
+    }
+
+    public function render(): string {
+        ob_start();
+        extract($this->vars, EXTR_SKIP); // Без перезаписи существующих переменных
+        eval('?>' . $this->compiledContent);
+        return ob_get_clean();
+    }
+
+    private function compile(): void {
+        $content = file_get_contents($this->filePath);
+        
+        // Обработка MDSL-шаблонов
+        $content = MDSL::render($content);
+        
+        // Обработка Markdown
+        $parsedown = new Parsedown();
+        $this->compiledContent = $parsedown->text($content);
+    }
+}
+
+// Пример использования
+$page = new MDSFile('page.mds', [
+    'title' => 'Демо страница',
+    'content' => 'Текст с **Markdown**'
+]);
+
+echo $page->render();
+```
+
+---
+
+### **3. Как работает обработка Markdown**
+
+#### **a) Установка Parsedown**
+1. Скачайте библиотеку с [официального репозитория](https://github.com/erusev/parsedown)
+2. Положите `Parsedown.php` в папку проекта
+
+#### **b) Что обрабатывается**
+```markdown
+<!-- Будет преобразовано в <h2> -->
+## Заголовок 
+
+<!-- В список <ul><li> -->
+- Пункт 1
+- Пункт 2
+
+<!-- В таблицу <table> -->
+| Column 1 | Column 2 |
+|----------|----------|
+| Ячейка   | Данные   |
+```
+
+#### **c) Особенности**
+- **Безопасность**: Parsedown автоматически экранирует HTML-теги
+- **Производительность**: Обработка происходит за 1 проход
+- **Кастомизация**: Можно наследовать класс `Parsedown` для своих правил
+
+---
+
+### **4. Пример файла `page.mds`**
+```markdown
+<!--mdsl header-->
+title = <?= htmlspecialchars($title) ?>
+<!--/mdsl-->
+
+<0 div.container>
+  ## <?= $title ?>
+  
+  <?= $content ?>
+
+  <!-- Markdown-контент -->
+  
+  **Жирный текст** и [ссылка](https://example.com)
+```
+
+---
+
+### **5. Этапы обработки**
+1. **Шаг 1**: Замена MDSL-шаблонов  
+   ```php
+   $content = MDSL::render($content);
+   ```
+2. **Шаг 2**: Преобразование Markdown → HTML  
+   ```php
+   $parsedown->text($content);
+   ```
+3. **Шаг 3**: Выполнение PHP-вставок  
+   ```php
+   eval('?>' . $compiledContent);
+   ```
+
+---
+
+### **6. Безопасность**
+- **Экранирование переменных**:  
+  Всегда используйте `htmlspecialchars()`:
+  ```php
+  <?= htmlspecialchars($userInput) ?>
+  ```
+- **Ограничение переменных**:  
+  Передавайте только необходимые данные:
+  ```php
+  new MDSFile('file.mds', [
+      'safeVar' => 'value' // Вместо $_POST
+  ]);
+  ```
+
+---
+
+### **7. Производительность**
+Для ускорения добавьте кэширование:
+```php
+private function compile(): void {
+    $cacheFile = 'cache/' . md5($this->filePath) . '.html';
+    
+    if (file_exists($cacheFile)) {
+        $this->compiledContent = file_get_contents($cacheFile);
+    } else {
+        $content = MDSL::render(file_get_contents($this->filePath));
+        $this->compiledContent = (new Parsedown())->text($content);
+        file_put_contents($cacheFile, $this->compiledContent);
+    }
+}
+```
+
+---
+
+### **8. Кастомизация Markdown**
+Чтобы добавить свои правила (например, для Bootstrap):
+```php
+class CustomParsedown extends Parsedown {
+    protected function blockHeader($Line) {
+        $block = parent::blockHeader($Line);
+        $block['element']['attributes']['class'] = 'mt-4'; // Добавляем класс
+        return $block;
+    }
+}
+
+// Использование:
+$parsedown = new CustomParsedown();
+```
+
+---
+
+### **Итог**
+Теперь система:
+1. Поддерживает MDSL-шаблоны  
+2. Обрабатывает Markdown через Parsedown  
+3. Позволяет встраивать PHP-код  
+4. Легко масштабируется  
+
+Для старта просто скопируйте код и поместите `Parsedown.php` в проект. Готов помочь с доработками! 😊
